@@ -5,8 +5,18 @@
 }
 
 body {
+    font-family: 'montseratt', sans-serif;
+    
+}
+
+.app {
     background-image: url('./assets/images/snowMT.JPG');
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.4 ease-out;
+}
+.app.warm {
+    background: url('./assets/images/agave.jpg');
     background-size: cover;
     background-position: bottom;
     transition: 0.4 ease-out;
@@ -14,4 +24,6 @@ body {
 
 main {
     min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2) rgba(0, 0, 0, .75));
+    padding: 25px;;
 }
