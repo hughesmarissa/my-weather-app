@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const api = {
-    key: 'f380b5a69a1ca9ff2f4843a8ecd7bf3d',
+    key: "786c2d4a2cfe60ab1f9d80f9245a999d",
     base: "https://api.openweathermap.org/data/2.5/"
 };
 
@@ -12,9 +12,13 @@ function App() {
     //function to get weather
     const search = (e) => {
         if (e.key === 'Enter') {
-            fetch(`${api.base}weather?query${query}&units=metric&APPID${api.key}`)
+            fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
             .then(res => res.json())
-            .then(result => setWeather(result));
+            .then(result => {
+                setWeather(result);
+                setQuery('');
+                console.log(result);
+            });
         }
     }
 
@@ -38,6 +42,9 @@ function App() {
                     type="text"
                     className="search-bar"
                     placeholder="Search..."
+                    onChange={e => setQuery(e.target.value)}
+                    value={query}
+                    onKeyPress={search}
                 />
             </div>
             <div>
