@@ -10,16 +10,16 @@ body {
 }
 
 .app {
-    background-image: url('./assets/images/snowMT.JPG');
+    background-image: url('./assets/images/snow.jpg');
     background-size: cover;
     background-position: bottom;
-    transition: 0.4 ease-out;
+    transition: 0.5s ease-in;
 }
 .app.warm {
     background: url('./assets/images/agave.jpg');
     background-size: cover;
     background-position: bottom;
-    transition: 0.4 ease-out;
+    transition: 0.5s ease-in;
 }
 
 main {
