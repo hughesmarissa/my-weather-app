@@ -24,7 +24,7 @@ body {
 
 main {
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3));
     padding: 25px;
 }
 
@@ -88,4 +88,11 @@ main {
     text-shadow: 3px 6px rgba(50, 50, 50, 0.5);
     text-align: center;
     box-shadow: 3px 6px rgba(0, 0, 0, .2);
+}
+
+.weather-box .weather {
+    color: white;
+    font-size: 52px;
+    font-weight: 900;
+    text-shadow: 5px 5px rgba(0, 0, 0, .2);
 }
