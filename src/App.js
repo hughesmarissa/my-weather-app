@@ -12,7 +12,7 @@ function App() {
     //function to get weather
     const search = (e) => {
         if (e.key === 'Enter') {
-            fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+            fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
             .then(res => res.json())
             .then(result => {
                 setWeather(result);
@@ -36,7 +36,7 @@ function App() {
 
   return (
       //check for under/over 16° for background change
-    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
+    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 55) ? 'app warm' : 'app') : 'app'}>
         <main>
             <div className="search-box">
                 <input 
@@ -56,7 +56,7 @@ function App() {
                 </div>
                 <div className="weather-box">
                     <div className="temp">
-                        {Math.round(weather.main.temp)}°c
+                        {Math.round(weather.main.temp)}°f
                     </div>
                     <div className="weather">{weather.weather[0].main}</div>
                 </div>
